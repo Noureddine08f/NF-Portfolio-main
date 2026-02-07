@@ -1,0 +1,701 @@
+// i18n.js
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { projects } from "./src/constants";
+
+const resources = {
+  //enghlisch version
+  en: {
+    translation: {
+      about: {
+        my_picture_alt: "my picture",
+        greeting: "Hi, I'm",
+        my_name: "Noureddine",
+        last_name: "Fodil",
+        profession1: "Front End",
+        profession2: "developer",
+        from: "From",
+        location: " Algeria",
+        description:
+          "A passionate Frontend Developer with over 1 years of experience crafting responsive and accessible websites using HTML, CSS, JavaScript, and React.js. Focused on performance, user experience, and clean code.",
+        language_proficiency: "Language Proficiency",
+        english: "English",
+        english_level: "60%",
+        german: "German",
+        german_level: "45% (still learning)",
+        french: "French",
+        french_level: "20%(still learning)",
+        arabic: "Arabic",
+        arabic_level: "100% (Native)",
+        beginner: "Beginner",
+        intermediate: "Intermediate",
+        advanced: "Advanced",
+        fluent: "Fluent",
+        see_projects: "See My Projects",
+        welcome_note: "Welcome to My Portfolio",
+        available: "Available for work",
+        years_experience: "Years of Experience",
+        profession: ["Frontend Developer", "UI/UX Enthusiast"], // Array for multiple professions
+      },
+      stats: {
+        years_of_experience: "Years of Experience",
+        projects_completed: "Projects Completed",
+        technologies_mastered: "Techs Mastered",
+        happy_clients: "Happy Clients",
+      },
+      nav: {
+        about_me: "About Me",
+        projects: "Projects",
+        services: "Services",
+        education_experience: "Education & Experience",
+
+        cv: "CV",
+        contact_me: "Contact Me",
+        menu: "Menu",
+        dark_mode: "Dark Mode",
+        light_mode: "Light Mode",
+        logo_alt: "My Portfolio Logo",
+        footer: "NF | Portfolio",
+      },
+      projects: {
+        // Titles and UI text
+        projects: "My Projects",
+        see_more: "See More",
+        title_part1: "Few of my",
+        title_part2: "Projects",
+        subtitle: "Here are some of the projects I have worked on recently...",
+        view_project_button: "View project",
+        project_showcase_alt: "project showcase",
+        project_thumbnail_alt: "Thumbnail for project: {{name}}",
+
+        // Project names and descriptions
+        classroom_management: "Classroom Management System",
+        classroom_management_desc:
+          "This web application is designed for managing classroom data, focusing on administrative control, student and teacher attendance tracking, and attendance rate calculation. It allows educational institutions to efficiently monitor and update classroom-related information via a user-friendly and responsive interface.",
+
+        lan_monitoring: "LAN Monitoring System",
+        lan_monitoring_desc:
+          "This web application is a real-time LAN monitoring and device inventory system, designed and implemented during an internship at DCRD – SONATRACH. It provides IT administrators with a centralized dashboard to monitor system and software configurations of devices connected within a Local Area Network (LAN).",
+
+        alg_courses: "Courses and Quizzes Management",
+        alg_courses_desc:
+          "ALGCourses is an academic platform that connects teachers and students. It empowers instructors with course creation tools while giving learners an easy way to discover and join classes.",
+
+        nike_landing: "Nike Landing Page",
+        nike_landing_desc:
+          "This project is a fully responsive Nike landing page designed to demonstrate advanced Tailwind CSS techniques while delivering a sleek, modern e-commerce experience. Built with reusable components and optimized for performance, this page highlights Tailwind’s utility-first approach for rapid, scalable development.",
+
+        conference_system: "Conference Management System",
+        conference_system_desc:
+          "This web application is designed to automate and simplify the entire lifecycle of conference paper management—from submission to final decision. Built with Laravel, it provides secure, role-based dashboards for authors, reviewers, and chairs, ensuring a seamless workflow for academic conferences.",
+
+        face_recognition: "Face Recognition",
+        face_recognition_desc:
+          "FaceTrack is a Python-based desktop application built with PyQt5 that simplifies workforce management using AI-powered face recognition. Designed for small businesses and security needs, it offers an offline, lightweight solution to track employee attendance without complex setups.",
+        // Categories
+        category_web: "Web Application",
+        category_desktop: "Desktop Application",
+        category_ui: "UI Design",
+        category_internship: "Internship Project",
+        portfolio: "Portfolio",
+        all_projects: "All Projects",
+        view_code: "View Code",
+        live_demo: "Live Demo",
+        tech_label: "Technologies",
+        // Status
+        status_completed: "Completed",
+        status_in_progress: "In Progress",
+
+        // Roles
+        role_fullstack: "Full-stack Developer",
+        role_frontend: "Frontend Developer",
+        role_backend: "Backend Developer",
+        role_desktop: "Desktop Developer",
+
+        // UI labels
+        view_code: "View Code",
+        live_demo: "Live Demo",
+        tech_label: "Technologies",
+        role_label: "Role",
+        date_label: "Date",
+      },
+      services: {
+        title_part1: "I Provide You",
+        title_part2: "Super",
+        title_part3: "Quality",
+        title_part4: "services",
+
+        responsive_design: "Responsive Web Design & Development",
+        responsive_design_desc:
+          "Build fully responsive websites that look great on desktop, tablet, and mobile.",
+        responsive_design_techs: [
+          "HTML",
+          "CSS",
+          "Tailwind CSS",
+          "Flexbox",
+          "Grid",
+          "Media Queries",
+        ],
+
+        react_development: "Modern Front-End App Development with React",
+        react_development_desc:
+          "Develop scalable and maintainable front-end applications using component-based architecture.",
+        react_development_techs: [
+          "React.js",
+          "Hooks",
+          "JSX",
+          "Component Reusability",
+          "State Management",
+        ],
+
+        ui_ux_implementation: "UI/UX Implementation from Design Files",
+        ui_ux_implementation_desc:
+          "Convert design prototypes (Figma, XD, Sketch) into pixel-perfect, production-ready websites.",
+        ui_ux_implementation_techs: [
+          "HTML",
+          "CSS",
+          "Tailwind",
+          "JavaScript",
+          "Figma-to-code skills",
+        ],
+
+        version_control: "Version Control & Team Collaboration",
+        version_control_desc:
+          "Use Git and GitHub to collaborate with teams, manage branches, resolve merge conflicts, and track changes.",
+        version_control_techs: ["Git", "GitHub", "Git Flow", "Pull Requests"],
+
+        api_integration: "REST API Integration & Dynamic Data Handling",
+        api_integration_desc:
+          "Connect front-end apps to back-end APIs to display real-time or user-generated content.",
+        api_integration_techs: [
+          "JavaScript (Fetch, Axios)",
+          "React (useEffect, useState)",
+          "JSON",
+          "HTTP methods",
+        ],
+        subtitle: "What I Offer",
+        title_part1: "Comprehensive",
+        title_part2: "Web Development",
+        title_part3: "Services",
+        description:
+          "Custom solutions to bring your ideas to life, from frontend design to backend development.",
+      },
+      education_experience: {
+        education: "Education",
+        experience: "Experience",
+
+        academic_journey: "My Academic Journey",
+        bachelors_degree: "Baccalaureate in Natural and Life Sciences ",
+        undergraduate_studies:
+          "Professional Training in Web And App Development",
+        professional_experience: "Professional Experience",
+        agriculture_institution:
+          "National Specialized Institute of Vocational Training, (Internship)",
+        agriculture_description:
+          "Developing a full web application as a graduation project.\n Working with: React.js, Laravel, Tailwind CSS, SQLite",
+        /*  sonatrach: "Sonatrach – Final Year Project (PFE)",
+        sonatrach_description: "Engineered a LAN monitoring solution for the Technology & Development division that optimized software resource usage",
+*/
+        subtitle: "My Journey",
+        title: "Education & Experience",
+        bachelors_details: "Abdelhamid Kebabti High School, Algeria.",
+        undergraduate_details:
+          "National Specialized Institute of Vocational Training, Mohamed Tayeb Boucenna, Algeria.",
+      },
+
+      skills: {
+        self_motivation: "Self-Motivation",
+        problem_solving: "Problem-Solving",
+        analytical_thinking: "Analytical Thinking",
+        clear_communicator: "Clear Communicator",
+        creativity: "Creativity",
+        user_centered: "User-Centered",
+        lifelong_learner: "Lifelong Learner",
+        organized: "Organized",
+        Team_collaboration: "Team collaboration",
+        Time_management: "Time management",
+        Agile_scrum_familiarity: "Agile/scrum familiarity",
+        Communication_with_clients: "Communication with clients",
+      },
+      cv: {
+        title_part1: "Take A Look At My",
+        title_part2: "CV",
+        subtitle:
+          "A summary of my professional journey, skills, and accomplishments",
+        and: "And",
+        cv_preview_alt: "CV Preview",
+        download_text: "Download Full CV",
+        click_to_download: "Click to save PDF",
+        download_button: "Download Full CV",
+        thank_you_part1: "Thank You For Your",
+        thank_you_part2: "Time",
+        thank_you_message:
+          "I appreciate you taking the time to review my qualifications. Feel free to reach out if you'd like to discuss potential opportunities.",
+        profile_alt: "Profile",
+      },
+      footer: {
+        logo_alt: "Logo",
+        description:
+          "I am a passionate web developer with a focus on creating dynamic and responsive web applications. My expertise lies in HTML, CSS, JavaScript, and React, allowing me to build user-friendly interfaces and seamless user experiences. With experience in both front-end and back-end technologies, I create comprehensive solutions tailored to specific needs. I'm constantly learning new technologies and frameworks to stay at the forefront of web development.",
+        copyright_alt: "Copyright sign",
+        copyright_text: "Copyright. All rights reserved.",
+        terms_conditions: "Terms & Conditions",
+
+        // About Me section
+        about_me: "About Me",
+        birth_date: "08/08/2004 ",
+        location: " Algeria",
+        profession: "Web Developer",
+        freelancer: "Freelancer",
+
+        // Techs section
+        techs: "Techs",
+        html_css_js: "HTML & CSS & JS",
+        react: "React JS ",
+        bootstrap_tailwind: "Bootstrap & Tailwind CSS",
+        mysql: "MySQL",
+        git_github: "Git & GitHub",
+
+        // Get in touch section
+        get_in_touch: "Get in touch",
+        email: "fodil.noureddine.web@gmail.com",
+        phone: "+213775863537",
+
+        // Social media
+        github: "GitHub",
+        facebook: "Facebook",
+        instagram: "Instagram",
+      },
+    },
+  },
+
+  //deutsch version
+  de: {
+    translation: {
+      about: {
+        my_picture_alt: "Mein Bild",
+        greeting: "Hallo, ich bin",
+        my_name: "Noureddine",
+        last_name: "Fodil",
+        profession1: "Frontend",
+        profession2: "Entwickler",
+        from: "Aus",
+        location: "Algerien",
+        description:
+          "Ein leidenschaftlicher Frontend-Entwickler mit über 1 Jahr Erfahrung in der Erstellung responsiver und barrierefreier Websites mit HTML, CSS, JavaScript und React.js. Fokus auf Performance, Benutzererlebnis und sauberen Code.",
+        language_proficiency: "Sprachkenntnisse",
+        english: "Englisch",
+        english_level: "60%",
+        german: "Deutsch",
+        german_level: "45% (lerne noch)",
+        french: "Französisch",
+        french_level: "20% (lerne noch)",
+        arabic: "Arabisch",
+        arabic_level: "100% (Muttersprache)",
+        beginner: "Anfänger",
+        intermediate: "Mittelstufe",
+        advanced: "Fortgeschritten",
+        fluent: "Fließend",
+        see_projects: "Meine Projekte ansehen",
+        welcome_note: "Willkommen in meinem Portfolio",
+        available: "Verfügbar für Arbeit",
+        years_experience: "Jahre Erfahrung",
+        profession: ["Frontend Entwickler", "UI/UX Enthusiast"],
+      },
+
+      stats: {
+        years_of_experience: "Jahre Erfahrung",
+        projects_completed: "Abgeschlossene Projekte",
+        technologies_mastered: "Beherrschte Technologien",
+        happy_clients: "Zufriedene Kunden",
+      },
+
+      nav: {
+        about_me: "Über mich",
+        projects: "Projekte",
+        services: "Dienstleistungen",
+        education_experience: "Ausbildung & Erfahrung",
+        cv: "Lebenslauf",
+        contact_me: "Kontakt",
+        menu: "Menü",
+        dark_mode: "Dunkelmodus",
+        light_mode: "Hellmodus",
+        logo_alt: "Mein Portfolio Logo",
+        footer: "NF | Portfolio",
+      },
+
+      projects: {
+        projects: "Meine Projekte",
+        see_more: "Mehr sehen",
+        title_part1: "Einige meiner",
+        title_part2: "Projekte",
+        subtitle:
+          "Hier sind einige Projekte, an denen ich kürzlich gearbeitet habe...",
+        view_project_button: "Projekt ansehen",
+        project_showcase_alt: "Projektvorschau",
+        project_thumbnail_alt: "Vorschaubild für Projekt: {{name}}",
+
+        classroom_management: "Klassenverwaltungssystem",
+        classroom_management_desc:
+          "Diese Webanwendung dient zur Verwaltung von Klassendaten, mit Fokus auf administrative Kontrolle, Anwesenheitsverfolgung und Berechnung der Anwesenheitsquote.",
+
+        lan_monitoring: "LAN-Überwachungssystem",
+        lan_monitoring_desc:
+          "Eine Echtzeit-LAN-Überwachungs- und Geräteinventarplattform, entwickelt während eines Praktikums bei DCRD – SONATRACH.",
+
+        alg_courses: "Kurs- und Quizverwaltung",
+        alg_courses_desc:
+          "ALGCourses ist eine akademische Plattform, die Lehrer und Schüler verbindet und Kursverwaltung ermöglicht.",
+
+        nike_landing: "Nike Landing Page",
+        nike_landing_desc:
+          "Eine vollständig responsive Nike-Landingpage, erstellt mit Tailwind CSS, um modernes E-Commerce-Design zu demonstrieren.",
+
+        conference_system: "Konferenzverwaltungssystem",
+        conference_system_desc:
+          "Diese Anwendung automatisiert den gesamten Lebenszyklus von Konferenzbeiträgen – von der Einreichung bis zur Entscheidung.",
+
+        face_recognition: "Gesichtserkennung",
+        face_recognition_desc:
+          "FaceTrack ist eine Python-Desktop-App zur Mitarbeiterverwaltung mit KI-basierter Gesichtserkennung.",
+
+        category_web: "Webanwendung",
+        category_desktop: "Desktop-Anwendung",
+        category_ui: "UI Design",
+        category_internship: "Praktikumsprojekt",
+
+        all_projects: "Alle Projekte",
+        view_code: "Code ansehen",
+        live_demo: "Live Demo",
+        tech_label: "Technologien",
+
+        status_completed: "Abgeschlossen",
+        status_in_progress: "In Arbeit",
+
+        role_fullstack: "Fullstack Entwickler",
+        role_frontend: "Frontend Entwickler",
+        role_backend: "Backend Entwickler",
+        role_desktop: "Desktop Entwickler",
+
+        role_label: "Rolle",
+        date_label: "Datum",
+      },
+
+      services: {
+        title_part1: "Ich biete Ihnen",
+        title_part2: "hochwertige",
+        title_part3: "Web",
+        title_part4: "Dienstleistungen",
+
+        responsive_design: "Responsives Webdesign & Entwicklung",
+        responsive_design_desc:
+          "Erstellung vollständig responsiver Websites für Desktop, Tablet und Mobilgeräte.",
+
+        react_development: "Moderne Frontend-Entwicklung mit React",
+        react_development_desc:
+          "Entwicklung skalierbarer Frontend-Anwendungen mit komponentenbasierter Architektur.",
+
+        ui_ux_implementation: "UI/UX Umsetzung aus Design-Dateien",
+        ui_ux_implementation_desc:
+          "Umwandlung von Figma-, XD- oder Sketch-Designs in produktionsreife Websites.",
+
+        version_control: "Versionskontrolle & Teamarbeit",
+        version_control_desc:
+          "Zusammenarbeit mit Git und GitHub, Branches verwalten und Konflikte lösen.",
+
+        api_integration: "REST API Integration",
+        api_integration_desc:
+          "Verbindung von Frontend-Apps mit Backend-APIs zur dynamischen Datenanzeige.",
+      },
+
+      education_experience: {
+        education: "Ausbildung",
+        experience: "Erfahrung",
+        academic_journey: "Mein Bildungsweg",
+        bachelors_degree: "Abitur in Natur- und Lebenswissenschaften",
+        undergraduate_studies: "Berufsausbildung in Web- und App-Entwicklung",
+        professional_experience: "Berufserfahrung",
+        agriculture_institution:
+          "Nationales Berufsbildungsinstitut (Praktikum)",
+        agriculture_description:
+          "Entwicklung einer vollständigen Webanwendung als Abschlussprojekt.",
+        subtitle: "Mein Weg",
+        title: "Ausbildung & Erfahrung",
+      },
+
+      skills: {
+        self_motivation: "Selbstmotivation",
+        problem_solving: "Problemlösung",
+        analytical_thinking: "Analytisches Denken",
+        clear_communicator: "Klare Kommunikation",
+        creativity: "Kreativität",
+        user_centered: "Benutzerzentriert",
+        lifelong_learner: "Lebenslanges Lernen",
+        organized: "Organisiert",
+        Team_collaboration: "Teamarbeit",
+        Time_management: "Zeitmanagement",
+        Agile_scrum_familiarity: "Agile/Scrum Kenntnisse",
+        Communication_with_clients: "Kundenkommunikation",
+      },
+
+      cv: {
+        title_part1: "Wirf einen Blick auf",
+        title_part2: "meinen Lebenslauf",
+        subtitle:
+          "Eine Zusammenfassung meines beruflichen Werdegangs, meiner Fähigkeiten und Erfolge",
+        and: "und",
+        cv_preview_alt: "Vorschau des Lebenslaufs",
+        download_text: "Vollständigen Lebenslauf herunterladen",
+        click_to_download: "Klicken, um die PDF-Datei zu speichern",
+        download_button: "Lebenslauf herunterladen",
+        thank_you_part1: "Vielen Dank für Ihre",
+        thank_you_part2: "Zeit",
+        thank_you_message:
+          "Vielen Dank, dass Sie sich die Zeit genommen haben, meine Qualifikationen zu prüfen. Kontaktieren Sie mich gerne für weitere Informationen.",
+        profile_alt: "Profilbild",
+      },
+
+      footer: {
+        about_me: "Über mich",
+        location: "Algerien",
+        profession: "Webentwickler",
+        freelancer: "Freelancer",
+        get_in_touch: "Kontakt aufnehmen",
+        email: "fodil.noureddine.web@gmail.com",
+        phone: "+213775863537",
+        github: "GitHub",
+        facebook: "Facebook",
+        instagram: "Instagram",
+      },
+    },
+  },
+
+  //arabic version
+  ar: {
+    translation: {
+      about: {
+        my_picture_alt: "صورتي",
+        greeting: "أهلاً، أنا",
+        my_name: "نور الدين",
+        last_name: "فضيل",
+        profession1: "مطور",
+        profession2: "واجهات أمامية",
+        from: "من",
+        location: "الجزائر",
+        description:
+          "مطور واجهات أمامية شغوف بخبرة تزيد عن سنتين في بناء مواقع ويب متجاوبة وسهلة الوصول باستخدام HTML و CSS و JavaScript و React.js. أركز على الأداء وتجربة المستخدم والكود النظيف.",
+        language_proficiency: "إتقان اللغات",
+        english: "الإنجليزية",
+        english_level: "60%",
+        german: "الألمانية",
+        german_level: "20% (ما زلت أتعلم)",
+        french: "الفرنسية",
+        french_level: "80%",
+        arabic: "العربية",
+        arabic_level: "100% (اللغة الأم)",
+        beginner: "مبتدئ",
+        intermediate: "متوسط",
+        advanced: "متقدم",
+        fluent: "طلاقة",
+        see_projects: "شاهد مشاريعي",
+        welcome_note: "مرحباً بكم في معرض أعمالي",
+        available: "متاح للعمل",
+        years_experience: "سنوات الخبرة",
+        profession: ["مطور واجهات أمامية", "هاوي UI/UX"],
+      },
+      stats: {
+        years_of_experience: "سنوات الخبرة",
+        projects_completed: "مشاريع مكتملة",
+        technologies_mastered: "تقنيات متقنة",
+        happy_clients: "عملاء سعداء",
+      },
+      nav: {
+        about_me: "من أنا",
+        projects: "المشاريع",
+        services: "الخدمات",
+        education_experience: "التعليم والخبرة",
+
+        cv: "السيرة الذاتية",
+        contact_me: "تواصل معي",
+        menu: "القائمة",
+        dark_mode: "الوضع الليلي",
+        light_mode: "الوضع النهاري",
+        logo_alt: "شعار محفظتي",
+        footer: "GA | محفظة الأعمال",
+      },
+      projects: {
+        projects: "مشاريعي",
+        see_more: "شاهد المزيد",
+        title_part1: "بعض من",
+        title_part2: "مشاريعي",
+        subtitle: "إليك بعض المشاريع التي عملت عليها مؤخرًا...",
+        view_project_button: "عرض المشروع",
+        project_showcase_alt: "عرض المشروع",
+        project_thumbnail_alt: "صورة مصغرة للمشروع: {{name}}",
+
+        classroom_management: "نظام إدارة الفصول الدراسية",
+        classroom_management_desc:
+          "تم تصميم تطبيق الويب هذا لإدارة بيانات الفصول الدراسية، مع التركيز على الرقابة الإدارية، وتتبع حضور الطلاب والمعلمين، وحساب معدل الحضور. يسمح للمؤسسات التعليمية بمراقبة وتحديث المعلومات المتعلقة بالفصول الدراسية بكفاءة عبر واجهة سهلة الاستخدام ومتجاوبة.",
+
+        lan_monitoring: "نظام مراقبة الشبكة المحلية",
+        lan_monitoring_desc:
+          "تطبيق الويب هذا هو نظام لمراقبة الشبكة المحلية في الوقت الفعلي وجرد الأجهزة، تم تصميمه وتنفيذه خلال فترة تدريب في DCRD – سوناطراك. يوفر لمسؤولي تكنولوجيا المعلومات لوحة تحكم مركزية لمراقبة تكوينات النظام والبرامج للأجهزة المتصلة داخل شبكة محلية (LAN).",
+
+        alg_courses: "إدارة الدورات والاختبارات",
+        alg_courses_desc:
+          "ALGCourses هي منصة أكاديمية تربط المعلمين والطلاب. تمكن المدربين من أدوات إنشاء الدورات مع منح المتعلمين طريقة سهلة لاكتشاف والانضمام إلى الفصول.",
+
+        nike_landing: "صفحة هبوط نايك",
+        nike_landing_desc:
+          "هذا المشروع عبارة عن صفحة هبوط لشركة نايك متجاوبة تمامًا مصممة لإظهار تقنيات CSS Tailwind المتقدمة مع تقديم تجربة تجارة إلكترونية أنيقة وحديثة. تم بناؤها بمكونات قابلة لإعادة الاستخدام ومُحسّنة للأداء.",
+
+        conference_system: "نظام إدارة المؤتمرات",
+        conference_system_desc:
+          "تم تصميم تطبيق الويب هذا لأتمتة وتبسيط دورة حياة إدارة أوراق المؤتمرات بالكامل — من التقديم إلى القرار النهائي. مبني باستخدام Laravel، يوفر لوحات تحكم آمنة وقائمة على الأدوار للمؤلفين والمراجعين والرؤساء.",
+
+        face_recognition: "التعرف على الوجه",
+        face_recognition_desc:
+          "FaceTrack هو تطبيق سطح مكتب قائم على Python مبني بـ PyQt5 يبسط إدارة القوى العاملة باستخدام التعرف على الوجه المدعوم بالذكاء الاصطناعي. مصمم للشركات الصغيرة والاحتياجات الأمنية، ويقدم حلاً غير متصل بالإنترنت وخفيف الوزن لتتبع حضور الموظفين.",
+
+        category_web: "تطبيق ويب",
+        category_desktop: "تطبيق سطح مكتب",
+        category_ui: "تصميم واجهة المستخدم",
+        category_internship: "مشروع تدريب",
+        portfolio: "محفظة أعمال",
+        all_projects: "جميع المشاريع",
+        view_code: "عرض الكود",
+        live_demo: "معاينة حية",
+        tech_label: "التقنيات",
+        status_completed: "مكتمل",
+        status_in_progress: "قيد التنفيذ",
+
+        role_fullstack: "مطور فل ستاك",
+        role_frontend: "مطور واجهات أمامية",
+        role_backend: "مطور خلفية",
+        role_desktop: "مطور تطبيقات سطح المكتب",
+
+        role_label: "الدور",
+        date_label: "التاريخ",
+      },
+      services: {
+        title_part1: "أقدم لكم",
+        title_part2: "خدمات",
+        title_part3: "عالية",
+        title_part4: "الجودة",
+
+        responsive_design: "تصميم وتطوير مواقع ويب متجاوبة",
+        responsive_design_desc:
+          "بناء مواقع ويب متجاوبة بالكامل تبدو رائعة على سطح المكتب والأجهزة اللوحية والهواتف المحمولة.",
+
+        react_development:
+          "تطوير تطبيقات الواجهة الأمامية الحديثة باستخدام React",
+        react_development_desc:
+          "تطوير تطبيقات واجهات أمامية قابلة للتوسع والصيانة باستخدام بنية قائمة على المكونات.",
+
+        ui_ux_implementation:
+          "تنفيذ واجهة المستخدم/تجربة المستخدم من ملفات التصميم",
+        ui_ux_implementation_desc:
+          "تحويل نماذج التصميم (Figma, XD, Sketch) إلى مواقع ويب مثالية بدقة وجاهزة للإنتاج.",
+
+        version_control: "التحكم في الإصدار والتعاون الجماعي",
+        version_control_desc:
+          "استخدام Git و GitHub للتعاون مع الفرق، وإدارة الفروع، وحل تعارضات الدمج، وتتبع التغييرات.",
+
+        api_integration: "تكامل REST API والتعامل مع البيانات الديناميكية",
+        api_integration_desc:
+          "ربط تطبيقات الواجهة الأمامية بواجهات برمجة التطبيقات للعرض المحتوى في الوقت الفعلي أو المحتوى الذي ينشئه المستخدم.",
+
+        subtitle: "ماذا أقدم",
+        description:
+          "حلول مخصصة لتحويل أفكارك إلى واقع، من تصميم الواجهة الأمامية إلى تطوير الخلفية.",
+      },
+      education_experience: {
+        education: "التعليم",
+        experience: "الخبرة",
+
+        academic_journey: "رحلتي الأكاديمية",
+        bachelors_degree: "شهادة البكالوريا في العلوم الطبيعية وعلوم الحياة",
+        undergraduate_studies: "تكوين مهني في تطوير الويب و التطبيقات",
+        professional_experience: "الخبرة المهنية",
+        agriculture_institution:
+          "المعهد الوطني المتخصص في التكوين المهني، محمد الطيب بوسنة (تدريب)",
+        agriculture_description:
+          "تطوير تطبيق ويب كامل كمشروع تخرج. العمل مع: React.js، Laravel، Tailwind CSS، SQLite",
+        /*sonatrach: "سوناطراك – مشروع نهاية الدراسة (PFE)",
+          sonatrach_description: "هندسة حل لمراقبة الشبكة المحلية لقسم التكنولوجيا والتطوير مما حسّن استخدام موارد البرمجيات",
+*/
+        subtitle: "رحلتي",
+        title: "التعليم والخبرة",
+        bachelors_details: " ثانوية عبد الحميد قباطي،الجزائر .",
+        undergraduate_details:
+          " المعهد الوطني المتخصص في التكوين والتعليم المهنين محمد الطيب بوسنة.",
+      },
+      skills: {
+        self_motivation: "التحفيز الذاتي",
+        problem_solving: "حل المشكلات",
+        analytical_thinking: "التفكير التحليلي",
+        clear_communicator: "تواصل واضح",
+        creativity: "الإبداع",
+        user_centered: "التركيز على المستخدم",
+        lifelong_learner: "تعلم مستمر",
+        organized: "منظم",
+        Team_collaboration: "التعاون الجماعي",
+        Time_management: "إدارة الوقت",
+        Agile_scrum_familiarity: "الإلمام بـ Agile/Scrum",
+        Communication_with_clients: "التواصل مع العملاء",
+      },
+      cv: {
+        title_part1: "ألقِ نظرة على",
+        title_part2: "سيرتي الذاتية",
+        subtitle: "ملخص لرحلتي المهنية ومهاراتي وإنجازاتي",
+        and: "و",
+        cv_preview_alt: "معاينة السيرة الذاتية",
+        download_text: "تحميل السيرة الذاتية الكاملة",
+        click_to_download: "اضغط لحفظ ملف PDF",
+        download_button: "تحميل السيرة الذاتية",
+        thank_you_part1: "شكراً على",
+        thank_you_part2: "وقتك",
+        thank_you_message: "أقدر وقتك في مراجعة مؤهلاتي.",
+        profile_alt: "الملف الشخصي",
+      },
+      footer: {
+        logo_alt: "الشعار",
+        description:
+          "أنا مطور ويب شغوف أركز على إنشاء تطبيقات ويب ديناميكية ومتجاوبة.",
+        copyright_alt: "علامة حقوق النشر",
+        copyright_text: "حقوق النشر. جميع الحقوق محفوظة.",
+        terms_conditions: "الشروط والأحكام",
+        about_me: "من أنا",
+        birth_date: "08/08/2004 ",
+        location: "الجزائر",
+        profession: "مطور ويب",
+        freelancer: "مستقل",
+        student_at: " ",
+        university: "",
+        techs: "التقنيات",
+        html_css_js: "HTML & CSS & JS",
+        react: "React JS ",
+        bootstrap_tailwind: "Bootstrap & Tailwind CSS",
+        mysql: "MySQL",
+        mongodb: "MongoDB",
+        git_github: "Git & GitHub",
+        get_in_touch: "تواصل معي",
+        linkedin: "لينكد إن",
+        github: "جيت هب",
+        facebook: "فيسبوك",
+        instagram: "إنستغرام",
+      },
+    },
+  },
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: "en",
+  fallbackLng: "en",
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
+export default i18n;
