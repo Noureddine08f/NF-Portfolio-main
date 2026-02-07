@@ -1,7 +1,6 @@
 // i18n.js
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { projects } from "./src/constants";
 
 const resources = {
   //enghlisch version
@@ -112,10 +111,7 @@ const resources = {
         role_backend: "Backend Developer",
         role_desktop: "Desktop Developer",
 
-        // UI labels
-        view_code: "View Code",
-        live_demo: "Live Demo",
-        tech_label: "Technologies",
+       
         role_label: "Role",
         date_label: "Date",
       },
@@ -174,9 +170,7 @@ const resources = {
           "HTTP methods",
         ],
         subtitle: "What I Offer",
-        title_part1: "Comprehensive",
-        title_part2: "Web Development",
-        title_part3: "Services",
+       
         description:
           "Custom solutions to bring your ideas to life, from frontend design to backend development.",
       },
@@ -193,9 +187,7 @@ const resources = {
           "National Specialized Institute of Vocational Training, (Internship)",
         agriculture_description:
           "Developing a full web application as a graduation project.\n Working with: React.js, Laravel, Tailwind CSS, SQLite",
-        /*  sonatrach: "Sonatrach – Final Year Project (PFE)",
-        sonatrach_description: "Engineered a LAN monitoring solution for the Technology & Development division that optimized software resource usage",
-*/
+       
         subtitle: "My Journey",
         title: "Education & Experience",
         bachelors_details: "Abdelhamid Kebabti High School, Algeria.",
@@ -621,9 +613,7 @@ const resources = {
           "المعهد الوطني المتخصص في التكوين المهني، محمد الطيب بوسنة (تدريب)",
         agriculture_description:
           "تطوير تطبيق ويب كامل كمشروع تخرج. العمل مع: React.js، Laravel، Tailwind CSS، SQLite",
-        /*sonatrach: "سوناطراك – مشروع نهاية الدراسة (PFE)",
-          sonatrach_description: "هندسة حل لمراقبة الشبكة المحلية لقسم التكنولوجيا والتطوير مما حسّن استخدام موارد البرمجيات",
-*/
+        
         subtitle: "رحلتي",
         title: "التعليم والخبرة",
         bachelors_details: " ثانوية عبد الحميد قباطي،الجزائر .",
