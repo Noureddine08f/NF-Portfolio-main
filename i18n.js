@@ -62,58 +62,7 @@ const resources = {
         see_more: "See More",
         title_part1: "Few of my",
         title_part2: "Projects",
-        subtitle: "Here are some of the projects I have worked on recently...",
-        view_project_button: "View project",
-        project_showcase_alt: "project showcase",
-        project_thumbnail_alt: "Thumbnail for project: {{name}}",
 
-        // Project names and descriptions
-        classroom_management: "Classroom Management System",
-        classroom_management_desc:
-          "This web application is designed for managing classroom data, focusing on administrative control, student and teacher attendance tracking, and attendance rate calculation. It allows educational institutions to efficiently monitor and update classroom-related information via a user-friendly and responsive interface.",
-
-        lan_monitoring: "LAN Monitoring System",
-        lan_monitoring_desc:
-          "This web application is a real-time LAN monitoring and device inventory system, designed and implemented during an internship at DCRD – SONATRACH. It provides IT administrators with a centralized dashboard to monitor system and software configurations of devices connected within a Local Area Network (LAN).",
-
-        alg_courses: "Courses and Quizzes Management",
-        alg_courses_desc:
-          "ALGCourses is an academic platform that connects teachers and students. It empowers instructors with course creation tools while giving learners an easy way to discover and join classes.",
-
-        nike_landing: "Nike Landing Page",
-        nike_landing_desc:
-          "This project is a fully responsive Nike landing page designed to demonstrate advanced Tailwind CSS techniques while delivering a sleek, modern e-commerce experience. Built with reusable components and optimized for performance, this page highlights Tailwind’s utility-first approach for rapid, scalable development.",
-
-        conference_system: "Conference Management System",
-        conference_system_desc:
-          "This web application is designed to automate and simplify the entire lifecycle of conference paper management—from submission to final decision. Built with Laravel, it provides secure, role-based dashboards for authors, reviewers, and chairs, ensuring a seamless workflow for academic conferences.",
-
-        face_recognition: "Face Recognition",
-        face_recognition_desc:
-          "FaceTrack is a Python-based desktop application built with PyQt5 that simplifies workforce management using AI-powered face recognition. Designed for small businesses and security needs, it offers an offline, lightweight solution to track employee attendance without complex setups.",
-        // Categories
-        category_web: "Web Application",
-        category_desktop: "Desktop Application",
-        category_ui: "UI Design",
-        category_internship: "Internship Project",
-        portfolio: "Portfolio",
-        all_projects: "All Projects",
-        view_code: "View Code",
-        live_demo: "Live Demo",
-        tech_label: "Technologies",
-        // Status
-        status_completed: "Completed",
-        status_in_progress: "In Progress",
-
-        // Roles
-        role_fullstack: "Full-stack Developer",
-        role_frontend: "Frontend Developer",
-        role_backend: "Backend Developer",
-        role_desktop: "Desktop Developer",
-
-       
-        role_label: "Role",
-        date_label: "Date",
       },
       services: {
         title_part1: "I Provide You",
@@ -321,56 +270,7 @@ const resources = {
         see_more: "Mehr sehen",
         title_part1: "Einige meiner",
         title_part2: "Projekte",
-        subtitle:
-          "Hier sind einige Projekte, an denen ich kürzlich gearbeitet habe...",
-        view_project_button: "Projekt ansehen",
-        project_showcase_alt: "Projektvorschau",
-        project_thumbnail_alt: "Vorschaubild für Projekt: {{name}}",
-
-        classroom_management: "Klassenverwaltungssystem",
-        classroom_management_desc:
-          "Diese Webanwendung dient zur Verwaltung von Klassendaten, mit Fokus auf administrative Kontrolle, Anwesenheitsverfolgung und Berechnung der Anwesenheitsquote.",
-
-        lan_monitoring: "LAN-Überwachungssystem",
-        lan_monitoring_desc:
-          "Eine Echtzeit-LAN-Überwachungs- und Geräteinventarplattform, entwickelt während eines Praktikums bei DCRD – SONATRACH.",
-
-        alg_courses: "Kurs- und Quizverwaltung",
-        alg_courses_desc:
-          "ALGCourses ist eine akademische Plattform, die Lehrer und Schüler verbindet und Kursverwaltung ermöglicht.",
-
-        nike_landing: "Nike Landing Page",
-        nike_landing_desc:
-          "Eine vollständig responsive Nike-Landingpage, erstellt mit Tailwind CSS, um modernes E-Commerce-Design zu demonstrieren.",
-
-        conference_system: "Konferenzverwaltungssystem",
-        conference_system_desc:
-          "Diese Anwendung automatisiert den gesamten Lebenszyklus von Konferenzbeiträgen – von der Einreichung bis zur Entscheidung.",
-
-        face_recognition: "Gesichtserkennung",
-        face_recognition_desc:
-          "FaceTrack ist eine Python-Desktop-App zur Mitarbeiterverwaltung mit KI-basierter Gesichtserkennung.",
-
-        category_web: "Webanwendung",
-        category_desktop: "Desktop-Anwendung",
-        category_ui: "UI Design",
-        category_internship: "Praktikumsprojekt",
-
-        all_projects: "Alle Projekte",
-        view_code: "Code ansehen",
-        live_demo: "Live Demo",
-        tech_label: "Technologien",
-
-        status_completed: "Abgeschlossen",
-        status_in_progress: "In Arbeit",
-
-        role_fullstack: "Fullstack Entwickler",
-        role_frontend: "Frontend Entwickler",
-        role_backend: "Backend Entwickler",
-        role_desktop: "Desktop Entwickler",
-
-        role_label: "Rolle",
-        date_label: "Datum",
+       
       },
 
       services: {
@@ -520,54 +420,7 @@ const resources = {
         see_more: "شاهد المزيد",
         title_part1: "بعض من",
         title_part2: "مشاريعي",
-        subtitle: "إليك بعض المشاريع التي عملت عليها مؤخرًا...",
-        view_project_button: "عرض المشروع",
-        project_showcase_alt: "عرض المشروع",
-        project_thumbnail_alt: "صورة مصغرة للمشروع: {{name}}",
-
-        classroom_management: "نظام إدارة الفصول الدراسية",
-        classroom_management_desc:
-          "تم تصميم تطبيق الويب هذا لإدارة بيانات الفصول الدراسية، مع التركيز على الرقابة الإدارية، وتتبع حضور الطلاب والمعلمين، وحساب معدل الحضور. يسمح للمؤسسات التعليمية بمراقبة وتحديث المعلومات المتعلقة بالفصول الدراسية بكفاءة عبر واجهة سهلة الاستخدام ومتجاوبة.",
-
-        lan_monitoring: "نظام مراقبة الشبكة المحلية",
-        lan_monitoring_desc:
-          "تطبيق الويب هذا هو نظام لمراقبة الشبكة المحلية في الوقت الفعلي وجرد الأجهزة، تم تصميمه وتنفيذه خلال فترة تدريب في DCRD – سوناطراك. يوفر لمسؤولي تكنولوجيا المعلومات لوحة تحكم مركزية لمراقبة تكوينات النظام والبرامج للأجهزة المتصلة داخل شبكة محلية (LAN).",
-
-        alg_courses: "إدارة الدورات والاختبارات",
-        alg_courses_desc:
-          "ALGCourses هي منصة أكاديمية تربط المعلمين والطلاب. تمكن المدربين من أدوات إنشاء الدورات مع منح المتعلمين طريقة سهلة لاكتشاف والانضمام إلى الفصول.",
-
-        nike_landing: "صفحة هبوط نايك",
-        nike_landing_desc:
-          "هذا المشروع عبارة عن صفحة هبوط لشركة نايك متجاوبة تمامًا مصممة لإظهار تقنيات CSS Tailwind المتقدمة مع تقديم تجربة تجارة إلكترونية أنيقة وحديثة. تم بناؤها بمكونات قابلة لإعادة الاستخدام ومُحسّنة للأداء.",
-
-        conference_system: "نظام إدارة المؤتمرات",
-        conference_system_desc:
-          "تم تصميم تطبيق الويب هذا لأتمتة وتبسيط دورة حياة إدارة أوراق المؤتمرات بالكامل — من التقديم إلى القرار النهائي. مبني باستخدام Laravel، يوفر لوحات تحكم آمنة وقائمة على الأدوار للمؤلفين والمراجعين والرؤساء.",
-
-        face_recognition: "التعرف على الوجه",
-        face_recognition_desc:
-          "FaceTrack هو تطبيق سطح مكتب قائم على Python مبني بـ PyQt5 يبسط إدارة القوى العاملة باستخدام التعرف على الوجه المدعوم بالذكاء الاصطناعي. مصمم للشركات الصغيرة والاحتياجات الأمنية، ويقدم حلاً غير متصل بالإنترنت وخفيف الوزن لتتبع حضور الموظفين.",
-
-        category_web: "تطبيق ويب",
-        category_desktop: "تطبيق سطح مكتب",
-        category_ui: "تصميم واجهة المستخدم",
-        category_internship: "مشروع تدريب",
-        portfolio: "محفظة أعمال",
-        all_projects: "جميع المشاريع",
-        view_code: "عرض الكود",
-        live_demo: "معاينة حية",
-        tech_label: "التقنيات",
-        status_completed: "مكتمل",
-        status_in_progress: "قيد التنفيذ",
-
-        role_fullstack: "مطور فل ستاك",
-        role_frontend: "مطور واجهات أمامية",
-        role_backend: "مطور خلفية",
-        role_desktop: "مطور تطبيقات سطح المكتب",
-
-        role_label: "الدور",
-        date_label: "التاريخ",
+        
       },
       services: {
         title_part1: "أقدم لكم",
