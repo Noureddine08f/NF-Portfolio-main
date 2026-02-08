@@ -1,6 +1,6 @@
-import headerLogo from './header-logo.png'
-import me from './noropic.png'
-import cv from './cv.jpg';
+import headerLogo from './header-logo.webp'
+import me from './noropic.webp'
+import cv from './cv.webp';
 
 export {
    
